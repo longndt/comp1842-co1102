@@ -4,7 +4,7 @@ function displayWelcome() {
    var age = document.getElementById("age").value;
 
    //get current year
-   var currentYear = 2024;
+   var currentYear = new Date().getFullYear();
 
    //calculate birth year
    var birthYear = currentYear - age;
