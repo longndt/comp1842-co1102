@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
 </head>
+
 <body>
    <script>
+      console.log("Today is Wednesday");
+      console.log("Hanoi is the capital of Vietnam");
+      //declare variable
+      a = 3;
+      console.log(a);
+
+      var b = 5;
+      console.log(b);
+
+      let c = 10;
+      console.log(c);
+
+      $fpt = "FPT Greenwich";
+      console.log($fpt);
+
+      _greenwich = "Greenwich Vietnam";
+      console.log(_greenwich);
+
+      //Note: We do not to include semicolon at the end of statement
+      console.log("Web programming 2")
+
+      //declare const
+      const PI_NUMBER = 3.14;
+      console.log(PI_NUMBER);
+
+      //be careful when using quotation for number
+      a = "3";
+      b = "5";
+      c = a + b;
+      console.log(c);
+
+      //arithmetic operator
+      a = 25;
+      b = 20;
+      c = a + b; //addition
+      d = a - b; //subtraction
+      e = a * b; //multiplication
+      f = a / b; //division
+      g = a % b; //modulus (get remainder of a division)
+      console.log("a + b = " + c);
+      console.log("a - b = " + d);
+      console.log("a * b = " + e);
+      console.log("a / b = " + f);
+      console.log("a % b = " + g);
+
+      x = 10;
+      //x++: postfix operator
+      y = x++; //y=x=10           => x++=x+1=10+1=11
+      //++x: prefix operator
+      z = ++x; //++x=x+1=11+1=12  => z=x=12
+      console.log("x = " + x);  //12
+      console.log("y = " + y);  //10
+      console.log("z = " + z);  //12
+
+      a = 1;
+      //increase "a" for "1"
+      a = a + 1;
+      a++;
+      a += 1;
+
+      //1 equal: assignment
+      x = 100;
+      //2 equal: comparison (only value)
+      if (10 == 10) {
+         console.log(true);
+      }
+      else {
+         console.log(false);
+      }
+      //3 equal: comparison (both value & type)
+      if (10 === "10") {
+         console.log(true);
+      }
+      else {
+         console.log(false);
+      }
 
    </script>
 </body>
+
 </html>
