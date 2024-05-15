@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      p {
+         text-transform: uppercase;
+         font-style: italic;
+      }
+   </style>
+   <link rel="stylesheet" href="style.css">
+   <script>
+      function changeColor() {
+         document.getElementById("text").style.color = "red";
+      }
+      function changeText() {
+         document.getElementById("text").innerHTML = "Welcome to Greenwich Vietnam";
+      }
+   </script>
+</head>
+<body>
+   <h1 style="color:red;">Web Programming 2</h1>
+   <button onclick="return alert('hello world');">Click me</button>
+   <button onclick="return changeColor()">Change Color</button>
+      <button onclick="return changeText()">Change Text </button>
+   <p id="text">We study MEVN stack in this module</p>
+   <img src="https://repository-images.githubusercontent.com/174798248/b934f300-c5bc-11ea-9d1d-45b908eb3f50" width="50%" height="50%">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3b4Z5BhiNJE?si=cyAQexoabrNxOzsL"
+   title="YouTube video player" frameborder="0"
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
