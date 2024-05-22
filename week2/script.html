@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <!-- enter grade return result
+     0-39: fail
+     40-59: pass
+     60-69: merit
+     70-100: distinction
+   -->
+   <input type="number" name="" id="grade" placeholder="Enter your grade">
+   <br><br>
+   <h1 id="result" style="color: red; background-color: yellow;"></h1>
+
+   <script>
+      document.getElementById("grade").addEventListener('input', () => {
+            //get grade input & convert to number
+            let grade = parseFloat(document.getElementById("grade").value);
+
+            //declare variable for result (default : empty)
+            let result = "";
+
+            //use conditional statement (if elseif else) to return corresponding result
+            if (grade >= 70 && grade <= 100) {
+               result = "Distinction";
+            } else if (grade >= 60 && grade <70) {
+               result = "Merit";
+            } else if (grade >= 40 && grade <60) {
+               result = "Pass";
+            } else if (grade >= 0 && grade <40) {
+               result = "Fail";
+            } else {
+               result = "Invalid grade";
+            }
+
+            //display result to output
+            document.getElementById("result").innerHTML = result;
+         });
+   </script>
+</body>
+</html>
