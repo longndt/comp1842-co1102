@@ -42,8 +42,8 @@
             document.getElementById("birthyear_error").textContent = "Invalid birth year";
             document.getElementById("age_output").textContent = "";
          } else {
-            document.getElementById("age_error").textContent = "";
             const age = currentYear - birthYear;
+            document.getElementById("birthyear_error").textContent = "";
             document.getElementById("age_output").style.color = "green";
             document.getElementById("age_output").textContent = "You are " + age + " year old now";
          }
