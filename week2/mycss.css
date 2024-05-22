@@ -1,0 +1,19 @@
+.underline {
+   text-decoration: underline;
+}
+
+.uppercase {
+   text-transform: uppercase;
+}
+
+.italic {
+   font-style: italic;
+}
+
+.bigger {
+   font-size: 200%;
+}
+
+.cangiua {
+   text-align: center;
+}

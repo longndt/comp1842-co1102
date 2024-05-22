@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS Selector</title>
+   <style>
+      /* universal selector */
+      * {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* element selector */
+      div#d2 * {
+         font-style: italic;
+         color: red;
+      }
+
+      input[type="text"] {
+         color: red;
+      }
+
+      input[type="email"] {
+         color: blue;
+      }
+
+      /* select all img elements as the descendent of div */
+      div img {
+         border: red 10px solid;
+      }
+
+      /* select only the img element as the direct child of div */
+      div>img {
+         border-radius: 50%;
+      }
+   </style>
+</head>
+
+<body>
+   <div>
+      <p>
+         <img
+            src="https://vietnam.travel/sites/default/files/styles/top_banner/public/2022-08/VNAT%20Cover%203.png?itok=atu5sEjq">
+      </p>
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/a3/2a/f2/big-hand-ang-golden-bridge.jpg?w=600&h=400&s=1">
+   </div>
+
+   <input type="text" name="" id="" placeholder="Enter name">
+   <br><br>
+   <input type="email" name="" id="" placeholder="Enter email">
+
+   <div id="d1">
+      <h1>heading 1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eveniet facere, cupiditate voluptas optio
+         error,
+         eos amet quisquam voluptatem magni impedit dolor consectetur soluta debitis assumenda laborum fugiat,
+         dignissimos
+         obcaecati.</p>
+   </div>
+
+   <div id="d2">
+      <h1>Another heading 1</h1>
+      <p>Another paragraph</p>
+   </div>
+</body>
+
+</html>
