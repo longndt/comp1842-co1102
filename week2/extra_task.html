@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Extra Task</title>
+</head>
+
+<body>
+   <!-- Task: Create a text input with a button and a heading. User input text then click button, the text is displayed to heading -->
+   Name: <input type="text" name="" id="name" placeholder="Enter your name">
+   <br>
+   <span id="name_error" style="color: red;"></span>
+   <br><br>
+   Birthyear: <input type="number" name="" id="birth_year" placeholder="Enter birth year">
+   <br>
+   <span id="birthyear_error" style="color: red;"></span>
+   <br><br>
+   <h3 id="name_output"></h3>
+   <h3 id="age_output"></h3>
+
+   <script>
+      document.getElementById("name").addEventListener('input', function () {
+         /* get name from text input */
+         const name = document.getElementById("name").value;
+         /* validate name input is empty or not */
+         if (name == "") {
+            document.getElementById("name_error").innerHTML = "Name can not be empty";
+            document.getElementById("name_output").innerHTML = "";
+         } else {
+            document.getElementById("name_error").innerHTML = "";
+            document.getElementById("name_output").style.color = "blue";
+            document.getElementById("name_output").innerHTML = "Hello " + name;
+         }
+      });
+
+        document.getElementById("birth_year").addEventListener('input', () => {
+         const birthYear = document.getElementById("birth_year").value;
+         //set value for current year
+         const currentYear = new Date().getFullYear();
+         if (birthYear < 1900 || birthYear > currentYear) {
+            document.getElementById("birthyear_error").textContent = "Invalid birth year";
+            document.getElementById("age_output").textContent = "";
+         } else {
+            document.getElementById("age_error").textContent = "";
+            const age = currentYear - birthYear;
+            document.getElementById("age_output").style.color = "green";
+            document.getElementById("age_output").textContent = "You are " + age + " year old now";
+         }
+      });
+   </script>
+</body>
+
+</html>

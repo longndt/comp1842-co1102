@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Web Programming 2 - JavaScript Tutorial 1</title>
+   <script>
+      //alert("alert from head section");
+   </script>
+</head>
+<body>
+   <h1>Tutorial 1</h1>
+   <!-- confirm: ask a question for Yes (OK) or No (Cancel) -->
+   <button onclick="return confirm('Are you sure to delete this item ?');">Delete</button>
+
+   <!-- TASK 3 (A)-->
+   <h2 id="text"></h2>
+   <h3 id="country"></h3>
+   <script>
+      /* TASK 1 */
+      /* display a popup dialog to web page */
+      /* alert : display an announcement or information */
+      /* Note: semicolon at the end of statement is OPTIONAL */
+      //alert ("alert from body section");
+
+      /* TASK 2 */
+      console.log("this text is only displayed in console");
+      console.log(2024);
+      let greenwich = "Greenwich Vietnam";
+      console.log("We are studying in " + greenwich);
+
+      /* TASK 3 (B) */
+      /* use JS to display content of an HTML element */
+      document.getElementById("text").innerHTML = "Ha Noi"
+      document.getElementById("country").textContent = "Viet Nam"
+   </script>
+</body>
+</html>
