@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>jQuery Add and Remove List Items Example</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+   <h3>jQuery Add and Remove List Items Example</h3>
+   <input type="text" id="itemInput" placeholder="Enter new item">
+   <button id="addItemButton">Add</button>
+   <ul id="itemList">
+      <!-- List items will be added here -->
+   </ul>
+
+   <script>
+      $(document).ready(function () {
+         $("#addItemButton").click(function () {
+            var newItem = $("#itemInput").val();
+            if (newItem) {
+               $("#itemList").append("<li>" + newItem + "<button class='removeItemButton' style='margin-top: 5px; margin-left: 5px' >Remove</button></li>");
+               $("#itemInput").val(""); // Clear input field
+            }
+         });
+
+         $(document).on("click", ".removeItemButton", function () {
+            $(this).parent().remove();
+         });
+      });
+   </script>
+
+</body>
+
+</html>
