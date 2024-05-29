@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Vue2 Introduction</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js">
+   </script>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div id="app-1" class="demo">
+      <p>{{ mevn }}</p>
+   </div>
+
+   <div id="app-2" class="demo">
+      <span v-bind:title="text">Hover this text for a while to see the title</span>
+      <br><br>
+      <input type="text" v-bind:placeholder="name">
+   </div>
+
+   <!-- Conditional -->
+   <div id="app-3" class="demo">
+      <p v-if="pass">
+         Congratulations ! You have passed the exam !
+      </p>
+   </div>
+
+   <!--Iteration -->
+   <div id="app-4" class="demo">
+      <ol>
+         <li v-for="todo in todos">
+            Task: {{ todo.text }}
+            <br>
+            Deadline : {{ todo.deadline }}
+         </li>
+      </ol>
+
+      <table border="1">
+         <tr>
+            <th>Task Name</th>
+            <th>Deadline</th>
+         </tr>
+         <tr v-for="task in todos">
+            <td>{{ task.text }}</td>
+            <td>{{ task.deadline }}</td>
+         </tr>
+      </table>
+   </div>
+
+   <!-- Handling user's input -->
+   <div id="app-5" class="demo">
+      <p>{{ message }}</p>
+      <button v-on:click="reverseMessage">
+         Reverse Message
+      </button>
+      <button v-on:click="hello">Hello</button>
+   </div>
+
+   <div id="app-6" class="demo">
+      <input type="text" v-model="text" placeholder="Enter text">
+      <p>{{ text }}</p>
+   </div>
+
+   <script src="./vue.js"></script>
+
+</body>
+
+</html>
