@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>JavaScript Fetch API</title>
+</head>
+
+<body>
+   <h2>JavaScript Fetch API</h2>
+   <button id="fetchDataButton">Fetch Data</button>
+   <div id="dataContainer">
+      <!-- Data fetch from API will be displayed here -->
+   </div>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         document.getElementById('fetchDataButton').addEventListener('click', function () {
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+               .then(response => {
+                  if (!response.ok) {
+                     throw new Error('Network response was not ok ' + response.statusText);
+                  }
+                  return response.json();
+               })
+               .then(data => {
+                  document.getElementById('dataContainer').innerHTML = `
+                  <h5>userId: ${data.userId}</h5>
+                  <h5>id: ${data.id}</h5>
+                  <h5>title: ${data.title}</h5>
+                  <h5>completed: ${data.completed}</h5>`;
+               })
+               .catch(error => {
+                  document.getElementById('dataContainer').innerHTML = `<p>Error fetching data: ${error.message}</p>`;
+               });
+         });
+      });
+   </script>
+</body>
+
+</html>
