@@ -1,63 +1,73 @@
-var app1 = new Vue({
-   el: '#app-1',
+const app1 = new Vue({
+   el: '#app1',
    data: {
-      mevn: "MEVN stack: MongoDB - ExpressJS - VueJS - NodeJS"
+      text: 'Hello Vue2'
    }
 })
 
-var app2 = new Vue({
-   el: '#app-2',
+const app2 = new Vue({
+   el: '#app2',
    data: {
-      text: "An introduction to web development frameworks",
-      name: "Enter your name here"
+      text: 'Have a nice day !',
+      holder: 'Enter your name'
    }
 })
 
-var app3 = new Vue({
-   el: '#app-3',
+const app3 = new Vue({
+   el: '#app3',
    data: {
       pass: true
    }
 })
 
-var app4 = new Vue({
-   el: '#app-4',
+const app4 = new Vue({
+   el: '#app4',
    data: {
-      todos: [
+      products: [
          {
-            text: 'Learn VueJS',
-            deadline: '2024-06-15'
+            name: "iphone 15 pro max",
+            price: 1000,
+            color: "black"
          },
          {
-            text: 'Learn NodeJS',
-            deadline: '2024-06-30'
+            name: "macbook pro m2",
+            price: 2000,
+            color: 'grey'
          },
          {
-            text: 'Develop a web app with MEVN stack',
-            deadline: '2024-07-15'
+            name: "ipad 13 pro",
+            price: 1500,
+            color: 'pink'
          }
       ]
    }
 })
 
-var app5 = new Vue({
-   el: '#app-5',
+const app5 = new Vue({
+   el: '#app5',
    data: {
-      message: 'Hello VueJS !'
+      name: " ",
+      quantity: 0,
+      price: 0
    },
    methods: {
-      reverseMessage: function () {
-         this.message = this.message.split('').reverse().join('')
-      },
-      hello: function () {
-         return alert("Hello world")
+      calculateTotal() {
+         return this.quantity * this.price
       }
    }
 })
 
-var app6 = new Vue({
-   el: '#app-6',
+const app6 = new Vue({
+   el: '#app6',
    data: {
-      text: ''
+      text: ""
+   },
+   methods: {
+      show() {
+         this.text = "We are studying Vue2"
+      },
+      hide() {
+         this.text = ""
+      }
    }
 })

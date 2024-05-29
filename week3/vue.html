@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Vue2 Introduction</title>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
+
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <!-- pass data from Vue to an HTML element -->
+   <div id="app1" class="demo">
+      <h3>{{ text }}</h3>
+   </div>
+
+   <!-- pass data from Vue to an HTML attribute -->
+   <div id="app2" class="demo">
+      <p v-bind:title="text">Hover me to see the title</p>
+      <input type="text" v-bind:placeholder="holder">
+   </div>
+
+   <!-- conditional: IF -->
+   <div id="app3" class="demo">
+      <h6 v-if="pass">
+         Congratulations. You have passed the exam !
+      </h6>
+   </div>
+
+   <!-- iteration (loop) : FOR -->
+   <div id="app4" class="demo">
+      <ol>
+         <li v-for="product in products">
+            Product name: {{ product.name }}
+            <br>
+            Product price: $ {{ product.price }}
+         </li>
+      </ol>
+      <table border="1">
+         <tr>
+            <th>Product name</th>
+            <th>Product price</th>
+            <th>Product color</th>
+         </tr>
+         <tr v-for="p in products">
+            <td>{{ p.name }}</td>
+            <td>${{ p.price}}</td>
+            <td>{{ p.color }}</td>
+         </tr>
+      </table>
+   </div>
+
+   <!-- handling user's input -->
+   <div id="app5" class="demo">
+      <label for="">Name</label>
+      <input type="text" v-model="name">
+      <br><br>
+      <label for="">Quantity</label>
+      <input type="number" v-model="quantity">
+      <br><br>
+      <label for="">Price</label>
+      <input type="number" v-model="price">
+      <br><br>
+      <ul>
+         <li>Product name: {{name}}</li>
+         <li>Product quantity: {{quantity}}</li>
+         <li>Product price: ${{price}}</li>
+         <li>Total price: ${{calculateTotal()}}</li>
+      </ul>
+   </div>
+
+    <!-- user interaction -->
+    <div id="app6" class="demo">
+      <button v-on:click="show">Show text</button>
+      <button v-on:click="hide">Hide text</button>
+      <h1>{{ text }}</h1>
+    </div>
+
+   <script src="./vue.js"></script>
+</body>
+
+</html>
