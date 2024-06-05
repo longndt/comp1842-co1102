@@ -1,0 +1,29 @@
+body {
+  background-color: white;
+}
+
+h1 {
+  color: rgb(228, 39, 18);
+  border-style: solid;
+  border-width: 5px;
+  border-color: yellow;
+}
+
+h2 {
+  color: rgb(228, 39, 18);
+}
+
+.info, .error, .success {
+  color: red;
+  border: 5px solid blue;
+}
+
+.success {
+  background-color: yellow;
+  font-style: italic;
+}
+
+.error {
+  background-color: lightsalmon;
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

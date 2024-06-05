@@ -1,0 +1,36 @@
+//SCSS: with curly braces (brackets) & semicolon
+
+@import "demo";
+
+$favourite-color: rgb(228, 39, 18);
+$another-color: yellow;
+
+h1 {
+   color: $favourite-color;
+   border-style: solid;
+   border-width: 5px;
+   border-color: $another-color;
+}
+
+h2 {
+   color: $favourite-color;
+}
+
+.info {
+   color: red;
+   border: 5px solid blue;
+}
+
+.success {
+   @extend .info;
+   background-color: yellow;
+   font-style: italic;
+}
+
+.error {
+   @extend .info;
+   background-color: lightsalmon;
+   text-decoration: underline;
+}
+
+
