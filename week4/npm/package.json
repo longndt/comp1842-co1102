@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "mongoose": "^5.8.5",
+    "sass": "^1.77.4"
+  },
+  "scripts": {
+    "sass:watch": "sass demo.scss greenwich.css --watch"
+  }
+}
