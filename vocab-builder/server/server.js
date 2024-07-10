@@ -29,14 +29,9 @@ app.get("/", (req, res) => {
 //display login page
 app.get("/login", (req, res) => {
    res.setHeader('Content-Type', 'text/html')
-   fs.readFile('views/login.html', (err, data) => {
-      if (!err) {
-         res.write(data)
-         res.end()
-      }
-   })
+   res.write("This is login page")
+   res.end()
 })
-
 
 //display welcome page
 app.get("/welcome", (req, res) => {
