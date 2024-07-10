@@ -12,12 +12,10 @@ const TaskSchema = new Schema({
       //required   => return default error message if value is empty
       required: "Task name can not be empty"   //return custom error message
    },
-   //shorthand => created_date: Date,
    created_date: {
       type: Date,
       default: Date.now      //set default value is current date (based on system date)
    },
-   //shorthand => status: String
    status: {
       type: [{
          type: String,
