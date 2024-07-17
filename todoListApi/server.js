@@ -5,12 +5,12 @@ const port = process.env.PORT || 3000
 
 //declare and import "mongoose" (work with database)
 const mongoose = require('mongoose')
+
 //config mongoose
-//mongoose.Promise = global.Promise
 const db = "mongodb://localhost:27017/api"
 mongoose.connect(db)
    .then(() => console.log('connect to db succeed !'))
-.catch((err) => console.log('connect to db failed. Error: )' + err))
+.catch((err) => console.log('connect to db failed !)' + err))
 
 const app = express()
 
