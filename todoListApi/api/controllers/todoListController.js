@@ -11,9 +11,7 @@ const list_all_tasks = async (req, res) => {
       res.send(err)
    }
 }
-
-//A) export each function one by one
-exports.read_a_task = async (req, res) => {
+read_a_task = async (req, res) => {
    try {
       let id = req.params.taskId
       let data = await Task.findById(id)
@@ -27,8 +25,7 @@ exports.read_a_task = async (req, res) => {
 // • update_a_task
 // • delete_a_task
 
-//B) or export all functions in this module at once
 module.exports = {
    list_all_tasks,
-   //read_a_task
+   read_a_task
 }
