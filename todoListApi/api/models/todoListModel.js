@@ -26,5 +26,6 @@ const TaskSchema = new Schema({
 })
 
 //VERY IMPORTANT: export module at last
-const todoListModel = mongoose.model('tasks', TaskSchema)
+const todoListModel = mongoose.model('tasks', TaskSchema)  //tasks: collection (table) name
+//Note: collection name should be lower case and plural form
 module.exports = todoListModel
