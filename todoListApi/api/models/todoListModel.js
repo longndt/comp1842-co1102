@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 //declare schema (collection/table design/structure)
 const Schema = mongoose.Schema;
 
-//declare TaskSchema (structure of "Task" collection)
+//declare TaskSchema (structure/design of "Task" collection/table)
 const TaskSchema = new Schema({
    //shorthand => name: String
    name: {
@@ -26,4 +26,5 @@ const TaskSchema = new Schema({
 })
 
 //VERY IMPORTANT: export module at last
-module.exports = mongoose.model("Tasks", TaskSchema)
+const todoListModel = mongoose.model('tasks', TaskSchema)
+module.exports = todoListModel
