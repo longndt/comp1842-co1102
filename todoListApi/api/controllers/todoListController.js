@@ -11,6 +11,7 @@ const list_all_tasks = async (req, res) => {
       res.send(err)
    }
 }
+
 read_a_task = async (req, res) => {
    try {
       let id = req.params.taskId
@@ -21,11 +22,44 @@ read_a_task = async (req, res) => {
    }
 }
 
-// • create_a_task
-// • update_a_task
-// • delete_a_task
+delete_a_task = async (req, res) => {
+   try {
+      //get taskId from url
+      let id = req.params.taskId
+      await Task.findByIdAndDelete(id)
+      res.json({ message: "Delete task succeed !" })
+      //res.send ("Delete task succeed !")
+   } catch (err) {
+      res.send(err)
+   }
+}
+
+create_a_task = async (req, res) => {
+   try {
+      //get task data from json
+      let data = req.body
+      await Task.create(data)
+      res.json({ message: "Create new task succeed !" })
+   } catch (err) {
+      res.send(err)
+   }
+}
+
+update_a_task = async (req, res) => {
+   try {
+      let id = req.params.taskId
+      let data = req.body
+      await Task.findByIdAndUpdate(id, data)
+      res.json({ message: "Update task succeed !" })
+   } catch (err) {
+      res.send(err)
+   }
+}
 
 module.exports = {
    list_all_tasks,
-   read_a_task
+   read_a_task,
+   delete_a_task,
+   create_a_task,
+   update_a_task
 }
