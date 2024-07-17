@@ -1,0 +1,14 @@
+[
+{
+  "english" : "car",
+  "german" : "auto"
+},
+{
+  "english" : "motorbike",
+  "german" : "motorrad"
+},
+{
+  "english": "bicycle",
+  "german": "fahrrad"
+}
+]
