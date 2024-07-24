@@ -15,7 +15,11 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-//3) define & register router
+//3) declare & config "cors"
+const cors = require('cors')
+app.use(cors())
+
+//4) define & register router
 const vocabRouter = require('./api/routes/vocabRouter')
 vocabRouter(app)
 
