@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Words from './views/Words.vue'
+import Words from './Words.vue'
 
 Vue.use(Router)
 

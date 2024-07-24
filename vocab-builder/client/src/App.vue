@@ -1,12 +1,6 @@
 <template>
-  <div id="app">
-    <div class="ui text container">
-      <div class="ui one column grid">
-        <div class="column">
-          <router-view />
-        </div>
-      </div>
-    </div>
+  <div>
+    <router-view />
   </div>
 </template>
 
@@ -15,23 +9,3 @@ export default {
   name: "app",
 };
 </script>
-
-<style>
-#app > div.navbar {
-  margin-bottom: 1.5em;
-}
-
-input {
-  widows: 300px;
-}
-div.label {
-  width: 120px;
-}
-div.input {
-  margin-bottom: 10px;
-}
-button.ui.button {
-  margin-top: 15px;
-  display: block;
-}
-</style>
