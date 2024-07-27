@@ -19,17 +19,16 @@
 </template>
 
 <script>
-import { api } from "./api.js"
+import { api } from "../api"
 
 export default {
-  name: "words",
   data() {
     return {
-      words: [],
+      words: []
     }
   },
   async mounted() {
-    this.words = await api.getWords();
+    this.words = await api.getAllWords()
   }
 }
 </script>
