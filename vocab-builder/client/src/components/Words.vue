@@ -22,6 +22,7 @@
 import { api } from "../api"
 
 export default {
+  name: 'Words',
   data() {
     return {
       words: []
