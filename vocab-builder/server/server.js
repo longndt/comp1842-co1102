@@ -1,5 +1,4 @@
 const express = require('express')
-const port = 3000
 const app = express()
 
 //1) declare & config "mongoose"
@@ -23,6 +22,7 @@ app.use(cors())
 const vocabRouter = require('./api/routes/vocabRouter')
 vocabRouter(app)
 
+const port = 3000
 app.listen(port)
 
 //Run web app in terminal : npm start
