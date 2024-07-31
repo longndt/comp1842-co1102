@@ -11,7 +11,7 @@ const router = new Router({
    routes: [
       {
          path: '/',
-         component : Homepage
+         redirect: '/words'
       },
       {
          path: '/words',
