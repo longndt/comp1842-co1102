@@ -6,8 +6,8 @@ const mongoose = require('mongoose')
 const db = "mongodb://localhost:27017/vocab-builder"  //vocab-builder: db name
 
 mongoose.connect(db)
-   .then(() => console.log('connect to db succeed !'))
-.catch((err) => console.error('connect to db failed ! ' + err))
+   .then(() => console.log('db connect succeed !'))
+.catch((err) => console.error('db connect failed ! ' + err))
 
 //2) declare & config "body-parser"
 const bodyParser = require('body-parser')
