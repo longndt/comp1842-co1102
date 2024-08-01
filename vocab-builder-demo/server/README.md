@@ -1,3 +1,9 @@
+## DB Setup
+- database server: mongodb://localhost:27017
+- database name: vocab-builder
+- collection name: vocabs
+- database file: db/vocabs.json
+
 ## Project setup
 npm install
 

@@ -14,6 +14,5 @@ const vocabSchema = mongoose.Schema(
       versionKey: false  //ignore version key for new data
    }
 )
-const vocabModel = mongoose.model('vocabs', vocabSchema)
-//vocabs: collection (table) name
+const vocabModel = mongoose.model('vocabs', vocabSchema)     //vocabs: collection (table) name
 module.exports = vocabModel
