@@ -2,7 +2,8 @@ const vocabModel = require('../models/vocabModel')
 
 const view_all_vocab = async (req, res) => {
    try {
-      vocabs = await vocabModel.find({})
+      //sort by _id descending => new words display first (on the top)
+      vocabs = await vocabModel.find({}).sort({ _id: -1 })
       res.json(vocabs)
    } catch (err) {
       res.send(err)

@@ -29,18 +29,18 @@ export const UpdateVocab = async (id, word) => {
    }
 }
 
-export const DeleteAllVocabs = async () => {
+export const ViewVocabById = async (id) => {
    try {
-      let response = await axios.delete(backEnd)
+      let response = await axios.get(backEnd + id)
       return response.data
    } catch (err) {
       console.error(err)
    }
 }
 
-export const ViewVocabById = async (id) => {
+export const DeleteAllVocabs = async () => {
    try {
-      let response = await axios.get(backEnd + id)
+      let response = await axios.delete(backEnd)
       return response.data
    } catch (err) {
       console.error(err)
